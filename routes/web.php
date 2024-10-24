@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-//models
-use App\Models\Movie;
+
+
+//Controllers
+use App\Http\Controllers\Guest\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,11 +18,4 @@ use App\Models\Movie;
 |
 */
 
-Route::get('/', function () {
-    $movies = Movie::all();
-
-    dd($movies);
-
-    return view('welcome', [
-    ]);
-});
+Route::get('/', [PageController::class, 'index'])->name('guest.home');
