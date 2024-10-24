@@ -16,7 +16,7 @@
                     <h2 class="card-title">{{ $movie->title }}</h2>
                 </div>
             </div>
-        @endforeach  
+        @endforeach
     </div>
 
 </div>
